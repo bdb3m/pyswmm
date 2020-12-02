@@ -204,6 +204,12 @@ class PySWMM(object):
             sys.stdout.write("\n\n... SWMM completed. There are errors.\n")
             raise (PYSWMMException("SWMM Close Failed"))
 
+    def save_hotstart(self, hs_file=None):
+        """
+        saves a hotstart file
+        """
+        self.SWMMlibobj.swmm_saveHotstart(ctypes.c_char_p(six.b(hs_file)))
+
     def swmm_run(self, inpfile=None, rptfile=None, binfile=None):
         """# TODO:."""
         if inpfile is None:

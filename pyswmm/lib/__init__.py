@@ -38,7 +38,7 @@ if os.name == 'nt':
         LIB_SWMM = os.path.join(
             HERE,
             _platform(),
-            'swmm5.dll').replace(
+            'swmm5_hs.dll').replace(
             '\\',
             '/')
 elif sys.platform == 'darwin':

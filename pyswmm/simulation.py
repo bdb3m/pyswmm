@@ -421,6 +421,15 @@ class Simulation(object):
         """
         self._model.swmmExec()
 
+    def save_hotstart(self, hs_filename):
+        """
+        Save a hotstart file at any given time step
+        Examples:
+        >>> sim = PYSWMM(r'\\test.inp')
+        >>> sim.save_hotstart('my_custom_hotstart_file.hsf')
+        """
+        self._model.save_hotstart(hs_filename)
+
     @property
     def engine_version(self):
         """
